@@ -12,6 +12,7 @@ subplot(1,3,2)
    xlabel('NO3 Deficit, nM')
    set(gca,'xaxisLocation','top')
    axis([-35 5 24.5 28])
+   
 subplot(1,3,3)
    plot(ExcessInM,SigmaTheta,'gd')
    axis ij

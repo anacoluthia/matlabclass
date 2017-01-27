@@ -6,17 +6,20 @@ ym = x.^(-3);
 % Part 1: 
 figure(1); 
 % subplot(1,3,1) % Is there a way to control the size of the plot window
-% that appears? Furthermore, is there a way to control where the figures
-% appear, i.e. not on top of each other? 
+% that appears? --No. Furthermore, is there a way to control where the figures
+% appear, i.e. not on top of each other? -- apparently *set* does a lot of
+% this, to be covered at a later date
 plot(x,yp,'g',x,ym,'m');
 ylim([-100 1000]);
 title('Plot 1');
 xlabel('x');
 ylabel('y(x)');
 % The grid for the text command does not seem to match that of the plot -
-% hence having to offset it. Is this true, and why?
-text(0.95,1,'X');
-text(0.95,-50,'Intersection'); % Can this text be placed at an angle?
+% hence having to offset it. Is this true, and why? -- *fontsize* can
+% change text sixe, but then offsets need ot be altered as well.
+text(0.95,1,'X','fontsize', 12);
+% Can this text be placed at an angle? -- Yes, need to look up the command
+text(1,25,'Intersection', 'rotation', 35, 'fontsize', 14); 
 
 % Part 2:
 figure(2); 
@@ -50,8 +53,9 @@ m = gradient(yp,x);
 hold on 
 % More of a fundamental question about loops - Why are the dummy variables
 % needed? Why does it not work to say "for each value of t, do this...
-for r = 1:length(t);
-    ix = find(x==t(r),1);
+for r = 1:length(t); % Serves as a counter i.e how many times to run the loop
+    ix = find(x==t(r),1); % finds the indices of the specified entries, 
+    % i.e. x(31), and tells it the max values to return, i.e. 1.
     yd = (x-x(ix))*m(ix)+yp(ix);
     plot(x,yd); 
 end
