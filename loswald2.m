@@ -2,6 +2,8 @@
 
 %Part 1:  
 radii = [7:6:32];
+% question - is there a way to tell it "give me 5 values with this
+% interval" without having to know the upper limit?
 area = pi.*radii.^2;
 circum = 2*pi.*radii;
 disp('  ');
