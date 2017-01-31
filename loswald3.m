@@ -22,10 +22,10 @@ ylabel('y(x)');
 text(0.95,1,'X','fontsize', 12);
 % Can this text be placed at an angle? -- Yes, need to look up the command
 % - 'rotation'
-text(1,25,'Intersection', 'rotation', 35, 'fontsize', 11); 
+text(1,25,'Intersection', 'rotation', 35); 
 % Further note, plots appear differently on different screens.  On my laptop,
 % the X & 'Intersection' appeared very small, so I increased the text size.
-% On my desktop, 14 seems too big...
+% On my desktop, 14 seems too big so I have reverted to default.
 
 % Part 2:
 figure(2); 
