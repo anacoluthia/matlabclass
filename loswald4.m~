@@ -56,10 +56,7 @@ hold off
 for j = 1:12;
     m1 = find(month == j);
     anom = temp(m)- meantemp(j);
-    mon_anom(j) = mean(abs(anom));
-end 
-figure(3);
-plot(mon, mon_anom);
+    mon_anom(j) = mean(abs(anom);
     
 
  
