@@ -71,9 +71,9 @@ T = 1;
 R = [ones(size(time)) cos(2*pi*time/T) sin(2*pi*time/T)];
 
 CF = R\temp;
-a=CF(1);
-b=CF(2);
-c=CF(3);
+% a=CF(1);
+% b=CF(2);
+% c=CF(3);
 xf=R*CF;   % reconstruct the fitted function
 e=temp-xf;    % error of the fit
 varExp = (var(temp) - var(e))/var(temp); % fraction variance explained
